@@ -14,14 +14,14 @@ class Cli
        end
    
     def self.get_user_dish 
+   puts "Choose your favorite dish by number to get the link to the recipe!"
       @new =[1,2,3,4,5,6,6]
         @new.each.with_index(1) do |dish,number|
           puts "#{number}. #{dish}"
         
     end 
-    binding.pry
   end
-    
+    binding.pry
   
 end
 Cli.get_user_dish
