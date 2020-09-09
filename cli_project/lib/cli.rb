@@ -5,15 +5,21 @@ class Cli
           puts "Welcome to Taste of Mexico! Where you can find the recipes to your 
           favorite authentic mexican food! If you would like to see a list 
           of dishes  press enter if your not interested put exit"
-     answer = gets.chomp
     end
     
+       def fake_array 
+       @new =[1,2,3,4,5,6,6]
+        
+         
+       end
+   
     def self.get_user_dish 
-      binding.pry 
-      Dishes.all.each.with_index do |dish,number|
-        binding.pry  
+      @new =[1,2,3,4,5,6,6]
+        @new.each.with_index(1) do |dish,number|
+          puts "#{number}. #{dish}"
         
     end 
+    binding.pry
   end
     
   
