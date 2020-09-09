@@ -3,7 +3,7 @@ require "nokogiri"
 require 'pry'
 
 
-class Scraper 
+class MexicanDishes::Scraper 
 
     def initialize 
     
@@ -25,5 +25,4 @@ class Scraper
        
         end 
      end
-    end
-    Scraper.scrape_url
+    end 

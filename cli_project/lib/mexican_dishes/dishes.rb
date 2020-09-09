@@ -1,7 +1,7 @@
   require 'pry'
  
  
-class Dishes
+class MexicanDishes::Dishes
  
     @@all = [] 
 
