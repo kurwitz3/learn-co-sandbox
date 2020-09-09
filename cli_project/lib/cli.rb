@@ -4,7 +4,8 @@ class Cli
        
           puts "Welcome to Taste of Mexico! Where you can find the recipes to your 
           favorite authentic mexican food! If you would like to see a list 
-          of dishes  press enter if your not interested put exit"
+          of dishes press y!"
+          Cli.first_user_input 
     end
     
        def fake_array 
@@ -21,7 +22,13 @@ class Cli
         
     end 
   end
-    binding.pry
+   def self.first_user_input 
+     answer = gets.strip
+    if answer == 'y'
+      Cli.get_user_dish
+    else 
+      Cli.starter 
+    end 
+  end
   
 end
-Cli.get_user_dish

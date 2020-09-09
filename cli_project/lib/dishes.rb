@@ -23,4 +23,3 @@ class Dishes
     
    
 end 
-Dishes.dish_list
