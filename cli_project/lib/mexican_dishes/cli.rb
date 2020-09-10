@@ -23,4 +23,15 @@ class MexicanDishes::Cli
        starter 
     end 
   end
+  
+   def second_user_input 
+     answer = gets.strip 
+   
+   
+   end 
+     
+     
+     
+     
+     
 end
