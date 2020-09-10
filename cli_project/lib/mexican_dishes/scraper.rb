@@ -5,10 +5,7 @@ require 'pry'
 
 class MexicanDishes::Scraper 
 
-    def initialize 
     
-    
-    end 
   
   
    WEB_URL = "https://www.mexicoinmykitchen.com/recipes/"
@@ -21,7 +18,7 @@ class MexicanDishes::Scraper
         parse.css("li.wsp-post").each do |list|
             dish = list.css("a").children[0].text
             recipe = list.css("a").attr("href").value
-          Dishes.new(dish,recipe)
+          MexicanDishes::Dishes.new(dish,recipe)
        
         end 
      end
