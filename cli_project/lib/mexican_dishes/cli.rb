@@ -37,7 +37,7 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
            puts "Here is the link for the recipe: 
            #{selection.recipe}"
         else
-          puts  "PLEASE MAKE VALID SELECTION"
+          puts  "PLEASE MAKE A VALID SELECTION"
           second_user_input
       end 
     end
