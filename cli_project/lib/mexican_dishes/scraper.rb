@@ -3,10 +3,7 @@
 
 class MexicanDishes::Scraper 
 
-    
-  
-  
-   WEB_URL = "https://www.mexicoinmykitchen.com/recipes/"
+    WEB_URL = "https://www.mexicoinmykitchen.com/recipes/"
    
    
      def self.scrape_url  
@@ -20,7 +17,7 @@ class MexicanDishes::Scraper
             recipe = list.css("a").attr("href").value
             if MexicanDishes::Dishes.all.length < 30
           MexicanDishes::Dishes.new(dish,recipe)
-         end
-        end 
+        end
+      end 
      end
   end 
