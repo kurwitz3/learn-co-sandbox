@@ -16,8 +16,8 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
    
   def get_user_dish 
     puts "Choose your favorite dish by number to get the link to the recipe!"
-        MexicanDishes::Dishes.all.each.with_index(1) do |dish,number|
-      puts "#{number}. #{dish.dish}"
+        MexicanDishes::Dishes.all.each.with_index(1) do |food,number|
+      puts "#{number}. #{food.dish}"
     end 
   end
    
@@ -34,7 +34,8 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
       answer = gets.strip.to_i
        if answer <= MexicanDishes::Dishes.all.length && answer > 0 
          selection = MexicanDishes::Dishes.all[answer - 1]
-           puts "#{selection.recipe}"
+           puts "Here is the link for the recipe: 
+           #{selection.recipe}"
         else
           puts  "PLEASE MAKE VALID SELECTION"
           second_user_input
