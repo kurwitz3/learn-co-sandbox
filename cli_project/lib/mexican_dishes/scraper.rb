@@ -18,8 +18,9 @@ class MexicanDishes::Scraper
         parse.css("li.wsp-post").each do |list|
             dish = list.css("a").children[0].text
             recipe = list.css("a").attr("href").value
+            if MexicanDishes::Dishes.all.length < 30
           MexicanDishes::Dishes.new(dish,recipe)
-        
+         end
         end 
      end
   end 
