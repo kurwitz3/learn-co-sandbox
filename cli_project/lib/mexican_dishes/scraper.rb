@@ -19,7 +19,7 @@ class MexicanDishes::Scraper
             dish = list.css("a").children[0].text
             recipe = list.css("a").attr("href").value
           MexicanDishes::Dishes.new(dish,recipe)
-        end
+        
         end 
      end
   end 

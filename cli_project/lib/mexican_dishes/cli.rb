@@ -11,7 +11,7 @@ favorite authentic Mexican food!
           If you would like to see a list of dishes press y!"
           MexicanDishes::Scraper.scrape_url
         first_user_input 
-        #second_user_input 
+        
     end
     
    
@@ -32,12 +32,15 @@ favorite authentic Mexican food!
     end 
   end
   
+    def second_user_input 
+      answer = gets.strip.to_i
+      if answer <= MexicanDishes::Dishes.all.length && answer > 0 
+        selection = MexicanDishes::Dishes.all[answer - 1]
+        binding.pry
+      
+      
+      end 
+    end 
   
-   def second_user_input 
-     answer = gets.strip.to_i
-   if answer <= @new.length && answer > 0 
-     @new[answer - 1 ]
-   else 
-   end 
- end 
+  
 end
