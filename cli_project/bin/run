@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
+
 require_relative '../lib/enviroment'
-require_relative '../lib/mexican_dishes/cli'
-require_relative '../lib/mexican_dishes/scraper'
+#require_relative '../lib/mexican_dishes/cli'
+#require_relative '../lib/mexican_dishes/scraper'
+#require_relative '../lib/mexican_dishes/dishes'
+
 
 MexicanDishes::Cli.new.starter

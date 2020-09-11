@@ -18,8 +18,4 @@ class MexicanDishes::Dishes
     def self.all 
         @@all
     end  
-   
-    
-    
-   
-end 
+   end 
