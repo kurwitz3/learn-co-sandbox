@@ -1,8 +1,7 @@
 # MexicanDishes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mexican_dishes`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mexican_dishes`. To experiment with that code, run `bin/run` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -21,8 +20,7 @@ Or install it yourself as:
     $ gem install mexican_dishes
 
 ## Usage
-
-TODO: Write usage instructions here
+ First tyep bundle install in to the command line. Once installed  tyre ./bin/run in thte commmand line and follow the instructions in the terminal.
 
 ## Development
 
