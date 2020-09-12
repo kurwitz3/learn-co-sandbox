@@ -10,7 +10,7 @@ class MexicanDishes::Cli
 authentic Mexican food!  If you would like to see a list of dishes press y!"
           MexicanDishes::Scraper.scrape_url
         first_user_input 
-        second_user_input 
+       second_user_input 
     end
     
    
@@ -18,6 +18,7 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
     puts "Choose your favorite dish by number to get the link to the recipe!"
         MexicanDishes::Dishes.all.each.with_index(1) do |food,number|
       puts "#{number}. #{food.dish}"
+   
     end 
   end
    
@@ -37,19 +38,18 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
            false 
          end 
         end 
-   
+   @answer = gets.strip.to_i
    
     def second_user_input 
-      answer = gets.strip.to_i
-      if valid(answer)
-       
-         selection = MexicanDishes::Dishes.all[answer - 1]
+        answer = gets.strip.to_i
+       if valid(answer) == false 
+       puts "MAKE A VALID SELECTION "
+      second_user_input
+       else 
+        selection = MexicanDishes::Dishes.all[answer - 1]
            puts "Here is the link for the recipe: 
            #{selection.recipe}"
-        else
-        puts "MAKE A VALID SELECTION "
-        second_user_input
-      end 
         
+       end 
     end
   end
