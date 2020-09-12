@@ -38,7 +38,7 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
            false 
          end 
         end 
-   @answer = gets.strip.to_i
+ 
    
     def second_user_input 
         answer = gets.strip.to_i
@@ -49,7 +49,7 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
         selection = MexicanDishes::Dishes.all[answer - 1]
            puts "Here is the link for the recipe: 
            #{selection.recipe}"
-        
+         exit
        end 
     end
   end
