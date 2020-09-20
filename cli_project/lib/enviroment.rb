@@ -11,6 +11,4 @@ require_relative "./mexican_dishes/dishes"
 require_relative "./mexican_dishes/scraper"
 
 
-module MexicanDishes
 
-end
