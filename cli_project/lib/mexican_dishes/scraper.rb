@@ -7,7 +7,6 @@ class MexicanDishes::Scraper
    
    
      def self.scrape_url  
-        character_list = []
         
         html = open(WEB_URL)
         parse = Nokogiri::HTML(html)

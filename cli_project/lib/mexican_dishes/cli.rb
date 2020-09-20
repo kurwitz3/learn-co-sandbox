@@ -1,17 +1,13 @@
 require 'pry'
 class MexicanDishes::Cli 
   
-  attr_accessor :dish
-  
-  
-  
-  def  starter 
+   def  starter 
     puts  "Welcome to Taste of Mexico! Where you can find the recipes to your favorite 
 authentic Mexican food!  If you would like to see a list of dishes press y!"
           MexicanDishes::Scraper.scrape_url
         first_user_input 
        second_user_input 
-    end
+  end
     
    
   def get_user_dish 
