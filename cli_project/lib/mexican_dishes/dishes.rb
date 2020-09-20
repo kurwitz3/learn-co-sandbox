@@ -1,6 +1,3 @@
-  require 'pry'
- 
- 
 class MexicanDishes::Dishes
  
     @@all = [] 

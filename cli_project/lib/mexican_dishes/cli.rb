@@ -10,40 +10,40 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
   
    def first_user_input 
      answer = gets.strip
-      if answer == 'y'
+    if answer == 'y'
        get_user_dish
-      else 
+     else 
        starter 
     end 
-  end
+   end
   
-   def get_user_dish 
+  def get_user_dish 
     puts "Choose your favorite dish by number to get the link to the recipe!"
-        MexicanDishes::Dishes.all.each.with_index(1) do |food,number|
-      puts "#{number}. #{food.dish}"
-   
-    end 
+      MexicanDishes::Dishes.all.each.with_index(1) do |food,number|
+    puts "#{number}. #{food.dish}"
+   end 
   end
   
   def valid(input)
     if input <= MexicanDishes::Dishes.all.length && input > 0 
-           true 
-         else 
-           false 
-         end 
-        end 
+     true 
+    else 
+     false 
+   end 
+  end 
  
    
-    def second_user_input 
-        answer = gets.strip.to_i
-       if valid(answer) == false 
+  def second_user_input 
+    answer = gets.strip.to_i
+     
+     if valid(answer) == false 
         puts "MAKE A VALID SELECTION "
         second_user_input
-       else 
+     else 
         selection = MexicanDishes::Dishes.all[answer - 1]
-           puts "Here is the link for the recipe: 
-           #{selection.recipe}"
-         exit
+          puts "Here is the link for the recipe: 
+          #{selection.recipe}"
+        exit
        end 
     end
   end

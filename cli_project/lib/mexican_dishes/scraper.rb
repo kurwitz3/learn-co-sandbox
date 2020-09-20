@@ -1,6 +1,3 @@
-
-
-
 class MexicanDishes::Scraper 
 
     WEB_URL = "https://www.mexicoinmykitchen.com/recipes/"
