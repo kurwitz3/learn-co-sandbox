@@ -25,25 +25,27 @@ authentic Mexican food!  If you would like to see a list of dishes press y!"
   end
   
   def valid(input)
-    if input <= MexicanDishes::Dishes.all.length && input > 0 
-     true 
-    else 
-     false 
-   end 
+ input <= MexicanDishes::Dishes.all.length && input > 0 
+    
+     
   end 
  
    
   def second_user_input 
     answer = gets.strip.to_i
      
-     if valid(answer) == false 
+       until valid(answer) 
         puts "MAKE A VALID SELECTION "
         second_user_input
-     else 
+       end 
         selection = MexicanDishes::Dishes.all[answer - 1]
           puts "Here is the link for the recipe: 
           #{selection.recipe}"
-        exit
-       end 
+          puts "If you would like to exit press x"
+          input  = gets.strip 
+          until input == "x"
+        get_user_dish 
+       second_user_input 
+     end
     end
   end
